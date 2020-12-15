@@ -9,7 +9,8 @@
 	},
 	"colors": {
 		"brand": {
-			"primary": "#2563EB"
+			"primary": "#3730A3",
+			"secondary": "#4F46E5"
 		},
 		"black": "#000",
 		"white": "#fff",
@@ -68,6 +69,7 @@
 		"accessibility-skip-links",
 		"outdated-browser",
 		"site-header",
+		"site-navigation",
 		"site-content",
 		"site-footer",
 		"2",
