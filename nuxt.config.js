@@ -1,6 +1,10 @@
 export default {
 	target: 'static',
 
+	router: {
+		base: '/squarekey/',
+	},
+
 	dir: {
 		assets: 'resources/assets',
 		layouts: 'resources/views/layouts',
