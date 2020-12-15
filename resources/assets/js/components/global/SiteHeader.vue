@@ -1,7 +1,7 @@
 <template>
 	<header class="relative z-site-header text-center">
 		<div>
-			<h1>Site header</h1>
+			<h1>Squarekey</h1>
 		</div>
 
 		<div>
