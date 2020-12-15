@@ -1,0 +1,33 @@
+{
+	"links": [
+		{
+			"title": "Home",
+			"url": "/"
+		},
+		{
+			"title": "About",
+			"url": "/about"
+		},
+		{
+			"title": "Contact",
+			"url": "/contact"
+		}
+	],
+	"social": [
+		{
+			"icon": "facebook",
+			"title": "Facebook",
+			"url": "https://www.facebook.com//"
+		},
+		{
+			"icon": "instagram",
+			"title": "instagram",
+			"url": "https://instagram.com/"
+		},
+		{
+			"icon": "twitter",
+			"title": "Twitter",
+			"url": "https://twitter.com/"
+		}
+	]
+}

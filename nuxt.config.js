@@ -1,49 +1,116 @@
 export default {
-  // Target (https://go.nuxtjs.dev/config-target)
-  target: 'static',
+	target: 'static',
 
-  // Global page headers (https://go.nuxtjs.dev/config-head)
-  head: {
-    title: 'squarekey',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
-    ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
-  },
+	dir: {
+		assets: 'resources/assets',
+		layouts: 'resources/views/layouts',
+		pages: 'resources/views/pages',
+		static: 'resources/static',
+	},
 
-  // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [
-  ],
+	components: [
+		{
+			path: 'resources/assets/js/components',
+		},
+	],
 
-  // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [
-  ],
+	content: {
+		dir: 'resources/content',
+	},
 
-  // Auto import components (https://go.nuxtjs.dev/config-components)
-  components: true,
+	generate: {
+		fallback: '404.html',
+	},
 
-  // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
-  buildModules: [
-    // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module',
-    // https://go.nuxtjs.dev/tailwindcss
-    '@nuxtjs/tailwindcss'
-  ],
+	css: [
+		// '@/resources/assets/scss/app',
+	],
 
-  // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: [
-    // https://go.nuxtjs.dev/content
-    '@nuxt/content'
-  ],
+	buildModules: [
+		[
+			'@nuxtjs/eslint-module', {
+				context: 'resources/assets/js',
+				// eslintPath: 'build/.eslintrc',
+			},
+		],
+		'@nuxtjs/tailwindcss',
+	],
 
-  // Content module configuration (https://go.nuxtjs.dev/config-content)
-  content: {},
+	modules: [
+		'@nuxt/content'
+	],
 
-  // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {
-  }
+	tailwindcss: {
+		cssPath: 'resources/assets/scss/app.scss',
+		configPath: 'build/tailwind.config.js',
+		exposeConfig: false,
+		config: {},
+	},
+
+	head: {
+		title: 'Squarekey',
+		meta: [
+			{
+				charset: 'utf-8',
+			},
+			{
+				name: 'viewport',
+				content: 'width=device-width, initial-scale=1',
+			},
+			{
+				hid: 'description',
+				name: 'description',
+				content: process.env.npm_package_description || '',
+			},
+			{
+				hid: 'og:title',
+				name: 'og:title',
+			},
+			{
+				hid: 'og:description',
+				name: 'og:description',
+			},
+			{
+				hid: 'og:type',
+				name: 'og:type',
+			},
+			{
+				hid: 'og:url',
+				name: 'og:url',
+			},
+			{
+				hid: 'og:site_name',
+				name: 'og:site_name',
+			},
+			{
+				hid: 'og:image',
+				name: 'og:image',
+			},
+			{
+				name: 'twitter:card',
+				content: 'summary_large_image',
+			},
+		],
+		link: [
+			{
+				rel: 'icon',
+				type: 'image/png',
+				href: '/static/img/meta/favicon-32.png',
+			},
+			{
+				rel: 'apple-touch-icon',
+				href: '/static/img/meta/favicon-180.png',
+			},
+			{
+				hid: 'canonical',
+				rel: 'canonical',
+				href: '/',
+			},
+		],
+	},
+
+	messages: {
+		error_404: 'Oh no',
+		back_to_home: 'Cmon, back home!',
+	},
 }
