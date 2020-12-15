@@ -1,3 +1,9 @@
 {
-	"title": "Contact"
+	"title": "Contact",
+	"model": {
+		"intro": {
+			"title": "Let's talk",
+			"content": "Give us a ring, or fill out the form below and we'll get in touch with you as soon as possible."
+		}
+	}
 }
