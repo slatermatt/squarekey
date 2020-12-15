@@ -26,6 +26,10 @@ export default {
 		// '@/resources/assets/scss/app',
 	],
 
+	plugins: [
+		'~/resources/assets/js/mixins/include',
+	],
+
 	buildModules: [
 		[
 			'@nuxtjs/eslint-module', {
