@@ -1,5 +1,10 @@
 <template>
-	<svg class="inline-block w-em h-em fill-current align-top">
+	<svg
+		:class="[
+			'inline-block fill-current align-top',
+			$props.size,
+		]"
+	>
 		<use
 			v-for="computedName in computedNames"
 			:key="computedName"
@@ -30,6 +35,11 @@
 			use: {
 				type: Object,
 				default: null,
+			},
+
+			size: {
+				type: String,
+				default: 'w-em h-em',
 			},
 		},
 

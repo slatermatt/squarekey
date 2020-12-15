@@ -1,5 +1,8 @@
 <template>
-	<div class="flex flex-col min-h-screen">
+	<div
+		v-cloak
+		class="flex flex-col min-h-screen"
+	>
 		<site-header
 			v-bind="$data.global"
 		/>
@@ -9,7 +12,7 @@
 			v-bind="$data.global"
 		/>
 
-		<main class="relative flex-auto bg-grey-100 z-site-content">
+		<main class="relative flex-auto bg-brand-tertiary z-site-content">
 			<Nuxt />
 		</main>
 

@@ -1,16 +1,22 @@
 <template>
-	<footer class="relative z-site-footer text-center">
-		<div>
-			<a
-				v-for="(link, index) in $props.social"
-				:key="index"
-				:href="link.url"
-				v-html="link.title"
-			/>
-		</div>
+	<footer class="relative z-site-footer text-center border-t-2 border-grey-300">
+		<div class="x-container py-4">
+			<div class="space-x-4">
+				<a
+					v-for="(link, index) in $props.social"
+					:key="index"
+					:href="link.url"
+				>
+					<icon
+						:name="link.icon"
+						size="w-8 h-8"
+					/>
+				</a>
+			</div>
 
-		<div>
-			&copy; <span v-text="$data.year" />
+			<div class="mt-4">
+				<p v-html="cCopy" />
+			</div>
 		</div>
 	</footer>
 </template>
@@ -26,10 +32,12 @@ export default {
 		},
 	},
 
-	data() {
-		return {
-			year: new Date().getFullYear(),
-		};
+	computed: {
+		cCopy() {
+			const year = new Date().getFullYear();
+
+			return `&copy;${year} Squarekey`;
+		},
 	},
 };
 </script>

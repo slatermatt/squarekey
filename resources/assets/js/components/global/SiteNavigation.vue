@@ -3,6 +3,7 @@
 		:class="[
 			'absolute top-0 left-0 w-full mt-16',
 			'bg-brand-secondary text-white z-site-navigation',
+			'md:hidden',
 		]"
 	>
 		<div class="x-container flex flex-col items-center justify-center space-y-5 my-10">
