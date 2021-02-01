@@ -1,20 +1,7 @@
 <template>
-	<header class="relative z-site-header text-center border-b-2 border-grey-300 h-16 xl:h-auto">
+	<header class="relative z-site-header text-center bg-brand-tertiary border-b-2 border-grey-300 h-16 xl:h-auto">
 		<div class="x-container flex items-center justify-between py-4">
-			<router-link
-				:class="[
-					'relative block w-full max-w-logo',
-					'xl:max-w-logo-xl',
-				]"
-				to="/"
-			>
-				<placeholder ratio="pt-logo">
-					<img
-						src="/static/img/logo.png"
-						alt="Squarekey"
-					>
-				</placeholder>
-			</router-link>
+			<logo />
 
 			<div class="md:hidden">
 				<button

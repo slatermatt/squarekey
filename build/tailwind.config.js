@@ -33,8 +33,8 @@ module.exports = {
 			...colors,
 		},
 		fontFamily: {
-			body: ['custom-body', 'Helvetica', 'sans-serif'],
-			heading: ['custom-heading', 'Georgia', 'serif'],
+			body: ['Lato', 'Helvetica', 'sans-serif'],
+			heading: ['Lato', 'Georgia', 'serif'],
 			system: ['system-ui', 'sans-serif'],
 		},
 		boxShadow: {

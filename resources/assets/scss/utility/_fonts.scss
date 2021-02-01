@@ -19,3 +19,7 @@
 		font-weight: $weight;
 	}
 }
+
+@include font-face('Lato', 'lato/lato-bold');
+@include font-face('Lato', 'lato/lato-italic');
+@include font-face('Lato', 'lato/lato-regular');

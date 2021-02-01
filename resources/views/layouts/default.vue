@@ -12,7 +12,7 @@
 			v-bind="$data.global"
 		/>
 
-		<main class="relative flex-auto bg-brand-tertiary z-site-content">
+		<main class="relative flex-auto z-site-content">
 			<Nuxt />
 		</main>
 
