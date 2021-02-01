@@ -4,7 +4,7 @@
 		:to="$props.url"
 		:class="[
 			'inline-flex items-center',
-			'px-4 py-2 space-x-2 text-white',
+			'px-4 py-2 space-x-2 text-white rounded-md',
 			$props.light
 				? 'border-2 border-white'
 				: 'bg-brand-primary',
