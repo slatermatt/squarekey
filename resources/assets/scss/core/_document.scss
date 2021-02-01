@@ -7,6 +7,10 @@ body {
 	@apply bg-white text-black font-body text-base leading-normal;
 }
 
+pre {
+	@apply overflow-scroll;
+}
+
 *:focus {
 	@apply outline-none;
 
