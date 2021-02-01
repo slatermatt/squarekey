@@ -94,7 +94,7 @@ module.exports = {
 				'9/16': ratio(16, 9),
 				'3/4': ratio(4, 3),
 				'4/3': ratio(3, 4),
-				'logo': ratio(491, 127),
+				'logo': ratio(134, 36),
 			},
 			spacing: {
 				em: '1em',

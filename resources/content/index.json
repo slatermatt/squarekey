@@ -1,9 +1,10 @@
 {
 	"title": "Home",
 	"model": {
-		"intro": {
-			"title": "A complete solution for all of your cleaning and hygiene needs!",
-			"content": "Aliquid quidem facere neque voluptatibus eligendi enim deleniti eveniet debitis perferendis? Perspiciatis, distinctio."
+		"title": "Welome to our world of effective hygiene control",
+		"cta": {
+			"title": "Our services",
+			"url": "/services"
 		}
 	}
 }

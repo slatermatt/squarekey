@@ -10,7 +10,7 @@
 			>
 				<placeholder ratio="pt-logo">
 					<img
-						src="//placehold.it/491x127?text=Squarekey"
+						src="/static/img/logo.png"
 						alt="Squarekey"
 					>
 				</placeholder>
