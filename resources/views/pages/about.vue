@@ -1,9 +1,8 @@
 <template>
-	<div>
-		<!-- <intro v-bind="$data.model.intro" /> -->
-
-		<pre v-text="$data" />
-	</div>
+	<builder
+		:components="$data.model"
+		class="mt-10 md:mt-16 xl:mt-24"
+	/>
 </template>
 
 <script>

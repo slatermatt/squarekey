@@ -91,6 +91,7 @@ module.exports = {
 			},
 			padding: {
 				full: '100%',
+				'12/16': ratio(16, 12),
 				'9/16': ratio(16, 9),
 				'3/4': ratio(4, 3),
 				'4/3': ratio(3, 4),

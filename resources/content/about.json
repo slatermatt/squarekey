@@ -9,18 +9,30 @@
 		{
 			"type": "split",
 			"title": "Sometimes small really is beautiful",
-			"content": "Because we’re small enough to know our customers and their needs personally, you can be sure that you're a priority and not just a statistic on a spreadsheet."
+			"content": "Because we’re small enough to know our customers and their needs personally, you can be sure that you're a priority and not just a statistic on a spreadsheet.",
+			"img": {
+				"src": "//placehold.it/1600x1200",
+				"alt": "placeholder"
+			}
 		},
 		{
 			"type": "split",
 			"title": "Obsessed with the quality of our products",
 			"content": "We’re a company obsessed with the quality of our products and strive to constantly refine them to make them the best-in-class.",
+			"img": {
+				"src": "//placehold.it/1600x1200",
+				"alt": "placeholder"
+			},
 			"flipped": true
 		},
 		{
 			"type": "split",
 			"title": "With you every step of the way",
-			"content": "Some are traditional products, some are new innovative solutions.  Whatever your requirements,  we have an extensive range of resources and dosing systems for every need."
+			"content": "Some are traditional products, some are new innovative solutions.  Whatever your requirements,  we have an extensive range of resources and dosing systems for every need.",
+			"img": {
+				"src": "//placehold.it/1600x1200",
+				"alt": "placeholder"
+			}
 		},
 		{
 			"type": "services",
