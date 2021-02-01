@@ -1,9 +1,47 @@
 {
 	"title": "Contact",
 	"model": {
-		"intro": {
-			"title": "Let's talk",
-			"content": "Give us a ring, or fill out the form below and we'll get in touch with you as soon as possible."
-		}
+		"builder": [
+			{
+				"type": "intro",
+				"title": "Ready to talk?",
+				"content": "Give us a ring, or fill out the form below and we'll get in touch with you as soon as possible."
+			},
+			{
+				"type": "contactForm",
+				"fields": [
+					{
+						"id": "firstName",
+						"name": "firstName",
+						"type": "text",
+						"placeholder": "First name"
+					},
+					{
+						"id": "lastName",
+						"name": "lastName",
+						"type": "text",
+						"placeholder": "Last name"
+					},
+					{
+						"id": "email",
+						"name": "email",
+						"type": "email",
+						"placeholder": "Email address"
+					},
+					{
+						"id": "company",
+						"name": "company",
+						"type": "text",
+						"placeholder": "Company name"
+					},
+					{
+						"id": "phone",
+						"name": "phone",
+						"type": "tel",
+						"placeholder": "Phone number"
+					}
+				]
+			}
+		]
 	}
 }

@@ -1,6 +1,6 @@
 <template>
 	<builder
-		:components="$data.model"
+		:components="$data.model.builder"
 		class="mt-10 md:mt-16 xl:mt-24"
 	/>
 </template>

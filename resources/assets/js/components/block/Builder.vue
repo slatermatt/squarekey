@@ -14,6 +14,7 @@
 	import Split from '../block/Split';
 	import Services from '../block/Services';
 	import Cta from '../block/Cta';
+	import ContactForm from '../block/ContactForm';
 
 	export default {
 		components: {
@@ -21,6 +22,7 @@
 			Split,
 			Services,
 			Cta,
+			ContactForm,
 		},
 
 		props: {

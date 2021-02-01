@@ -1,7 +1,8 @@
 <template>
-	<div>
-		<pre v-text="$data" />
-	</div>
+	<builder
+		:components="$data.model.builder"
+		class="mt-10 md:mt-16 xl:mt-24"
+	/>
 </template>
 
 <script>

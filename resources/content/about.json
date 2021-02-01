@@ -1,83 +1,85 @@
 {
 	"title": "About us",
-	"model": [
-		{
-			"type": "intro",
-			"title": "About us",
-			"content": "We have over 20 years experience in the industry, you can be sure that we have the expertise to ensure total confidence with proven products."
-		},
-		{
-			"type": "split",
-			"title": "Sometimes small really is beautiful",
-			"content": "Because we’re small enough to know our customers and their needs personally, you can be sure that you're a priority and not just a statistic on a spreadsheet.",
-			"img": {
-				"src": "//placehold.it/1600x1200",
-				"alt": "placeholder"
-			}
-		},
-		{
-			"type": "split",
-			"title": "Obsessed with the quality of our products",
-			"content": "We’re a company obsessed with the quality of our products and strive to constantly refine them to make them the best-in-class.",
-			"img": {
-				"src": "//placehold.it/1600x1200",
-				"alt": "placeholder"
+	"model": {
+		"builder": [
+			{
+				"type": "intro",
+				"title": "About us",
+				"content": "We have over 20 years experience in the industry, you can be sure that we have the expertise to ensure total confidence with proven products."
 			},
-			"flipped": true
-		},
-		{
-			"type": "services",
-			"items": [
-				{
-					"title": "Sed ut perspiciatis",
-					"content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ab beatae fuga mollitia laborum ex ipsa iste? Sit, provident doloribus!",
-					"cta": {
-						"title": "Find out more",
-						"url": "/services/foo"
-					}
-				},
-				{
-					"title": "Sed ut perspiciatis",
-					"content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ab beatae fuga mollitia laborum ex ipsa iste? Sit, provident doloribus!",
-					"cta": {
-						"title": "Find out more",
-						"url": "/services/foo"
-					}
-				},
-				{
-					"title": "Sed ut perspiciatis",
-					"content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ab beatae fuga mollitia laborum ex ipsa iste? Sit, provident doloribus!",
-					"cta": {
-						"title": "Find out more",
-						"url": "/services/foo"
-					}
-				},
-				{
-					"title": "Sed ut perspiciatis",
-					"content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ab beatae fuga mollitia laborum ex ipsa iste? Sit, provident doloribus!",
-					"cta": {
-						"title": "Find out more",
-						"url": "/services/foo"
-					}
+			{
+				"type": "split",
+				"title": "Sometimes small really is beautiful",
+				"content": "Because we’re small enough to know our customers and their needs personally, you can be sure that you're a priority and not just a statistic on a spreadsheet.",
+				"img": {
+					"src": "//placehold.it/1600x1200",
+					"alt": "placeholder"
 				}
-			]
-		},
-		{
-			"type": "split",
-			"title": "With you every step of the way",
-			"content": "Some are traditional products, some are new innovative solutions.  Whatever your requirements,  we have an extensive range of resources and dosing systems for every need.",
-			"img": {
-				"src": "//placehold.it/1600x1200",
-				"alt": "placeholder"
+			},
+			{
+				"type": "split",
+				"title": "Obsessed with the quality of our products",
+				"content": "We’re a company obsessed with the quality of our products and strive to constantly refine them to make them the best-in-class.",
+				"img": {
+					"src": "//placehold.it/1600x1200",
+					"alt": "placeholder"
+				},
+				"flipped": true
+			},
+			{
+				"type": "services",
+				"items": [
+					{
+						"title": "Sed ut perspiciatis",
+						"content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ab beatae fuga mollitia laborum ex ipsa iste? Sit, provident doloribus!",
+						"cta": {
+							"title": "Find out more",
+							"url": "/services/foo"
+						}
+					},
+					{
+						"title": "Sed ut perspiciatis",
+						"content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ab beatae fuga mollitia laborum ex ipsa iste? Sit, provident doloribus!",
+						"cta": {
+							"title": "Find out more",
+							"url": "/services/foo"
+						}
+					},
+					{
+						"title": "Sed ut perspiciatis",
+						"content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ab beatae fuga mollitia laborum ex ipsa iste? Sit, provident doloribus!",
+						"cta": {
+							"title": "Find out more",
+							"url": "/services/foo"
+						}
+					},
+					{
+						"title": "Sed ut perspiciatis",
+						"content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ab beatae fuga mollitia laborum ex ipsa iste? Sit, provident doloribus!",
+						"cta": {
+							"title": "Find out more",
+							"url": "/services/foo"
+						}
+					}
+				]
+			},
+			{
+				"type": "split",
+				"title": "With you every step of the way",
+				"content": "Some are traditional products, some are new innovative solutions.  Whatever your requirements,  we have an extensive range of resources and dosing systems for every need.",
+				"img": {
+					"src": "//placehold.it/1600x1200",
+					"alt": "placeholder"
+				}
+			},
+			{
+				"type": "cta",
+				"title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt et labore",
+				"cta": {
+					"title": "Contact us",
+					"url": "/contact"
+				}
 			}
-		},
-		{
-			"type": "cta",
-			"title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt et labore",
-			"cta": {
-				"title": "Contact us",
-				"url": "/contact"
-			}
-		}
-	]
+		]
+	}
 }
