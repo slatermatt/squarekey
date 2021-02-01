@@ -13,7 +13,12 @@
 		/>
 
 		<main class="relative flex-auto z-site-content">
-			<Nuxt />
+			<transition
+				name="x-fade"
+				mode="out-in"
+			>
+				<Nuxt />
+			</transition>
 		</main>
 
 		<site-footer

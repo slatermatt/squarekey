@@ -26,6 +26,43 @@
 			"flipped": true
 		},
 		{
+			"type": "services",
+			"items": [
+				{
+					"title": "Sed ut perspiciatis",
+					"content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ab beatae fuga mollitia laborum ex ipsa iste? Sit, provident doloribus!",
+					"cta": {
+						"title": "Find out more",
+						"url": "/services/foo"
+					}
+				},
+				{
+					"title": "Sed ut perspiciatis",
+					"content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ab beatae fuga mollitia laborum ex ipsa iste? Sit, provident doloribus!",
+					"cta": {
+						"title": "Find out more",
+						"url": "/services/foo"
+					}
+				},
+				{
+					"title": "Sed ut perspiciatis",
+					"content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ab beatae fuga mollitia laborum ex ipsa iste? Sit, provident doloribus!",
+					"cta": {
+						"title": "Find out more",
+						"url": "/services/foo"
+					}
+				},
+				{
+					"title": "Sed ut perspiciatis",
+					"content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ab beatae fuga mollitia laborum ex ipsa iste? Sit, provident doloribus!",
+					"cta": {
+						"title": "Find out more",
+						"url": "/services/foo"
+					}
+				}
+			]
+		},
+		{
 			"type": "split",
 			"title": "With you every step of the way",
 			"content": "Some are traditional products, some are new innovative solutions.  Whatever your requirements,  we have an extensive range of resources and dosing systems for every need.",
@@ -35,28 +72,7 @@
 			}
 		},
 		{
-			"type": "services",
-			"items": [
-				{
-					"title": "Sed ut perspiciatis",
-					"content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ab beatae fuga mollitia laborum ex ipsa iste? Sit, provident doloribus!"
-				},
-				{
-					"title": "Sed ut perspiciatis",
-					"content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ab beatae fuga mollitia laborum ex ipsa iste? Sit, provident doloribus!"
-				},
-				{
-					"title": "Sed ut perspiciatis",
-					"content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ab beatae fuga mollitia laborum ex ipsa iste? Sit, provident doloribus!"
-				},
-				{
-					"title": "Sed ut perspiciatis",
-					"content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ab beatae fuga mollitia laborum ex ipsa iste? Sit, provident doloribus!"
-				}
-			]
-		},
-		{
-			"type": "contactCta",
+			"type": "cta",
 			"title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt et labore",
 			"cta": {
 				"title": "Contact us",

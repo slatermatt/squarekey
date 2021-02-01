@@ -4,8 +4,10 @@
 		:to="$props.url"
 		:class="[
 			'inline-flex items-center',
-			'px-4 py-2 space-x-2',
-			'bg-brand-primary text-white',
+			'px-4 py-2 space-x-2 text-white',
+			$props.light
+				? 'border-2 border-white'
+				: 'bg-brand-primary',
 			{
 				'opacity-75 cursor-not-allowed': $props.disabled,
 			},
@@ -44,6 +46,7 @@
 			},
 
 			disabled: Boolean,
+			light: Boolean,
 		},
 
 		computed: {

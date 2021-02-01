@@ -1,0 +1,11 @@
+.x-fade {
+	&-enter-active,
+	&-leave-active {
+		@apply transition-opacity duration-500;
+	}
+
+	&-enter,
+	&-leave-to {
+		@apply opacity-0;
+	}
+}

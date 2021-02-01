@@ -5,6 +5,7 @@
 		<h1
 			:class="[
 				'text-center max-w-2xl x-h1',
+				'xl:max-w-3xl',
 				'mt-6 md:mt-8 xl:mt-10',
 			]"
 			v-text="$data.model.title"
