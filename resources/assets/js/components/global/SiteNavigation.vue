@@ -1,8 +1,8 @@
 <template>
 	<nav
 		:class="[
-			'absolute top-0 left-0 w-full mt-16',
-			'bg-brand-secondary text-white z-site-navigation',
+			'sticky top-16 left-0 w-full mt-16',
+			'bg-brand-primary text-white z-site-navigation',
 			'md:hidden',
 		]"
 	>

@@ -1,5 +1,5 @@
 <template>
-	<header class="relative z-site-header text-center bg-brand-tertiary h-16 xl:h-auto">
+	<header class="sticky top-0 z-site-header text-center bg-brand-tertiary h-16 xl:h-auto">
 		<div class="x-container flex items-center justify-between py-4">
 			<logo />
 

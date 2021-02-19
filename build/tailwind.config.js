@@ -41,6 +41,7 @@ module.exports = {
 			none: 'none',
 			focus: `0 0 5px ${colors.blue}`,
 			outline: `0 0 3px ${colors.blue}, 0 0 6px ${colors.blue}, 0 0 9px ${colors.blue}`,
+			soft: `0 5px 15px 5px ${colors.black}08`,
 		},
 		fontSize: {
 			xs: relative(12),
@@ -82,12 +83,14 @@ module.exports = {
 				'1/2': '50%',
 				...widths,
 				...(negative(widths)),
+				...theme('spacing'),
+				...(negative(theme('spacing'))),
 			}),
 			maxWidth: {
 				container: relative(1400),
 				copy: '35em',
 				logo: '8em',
-				'logo-xl': '12em',
+				'logo-xl': '10em',
 			},
 			padding: {
 				full: '100%',
