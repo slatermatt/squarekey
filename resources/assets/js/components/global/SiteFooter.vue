@@ -1,10 +1,30 @@
 <template>
-	<footer class="relative z-site-footer bg-brand-tertiary">
-		<div class="x-container py-4">
+	<footer class="relative z-site-footer bg-white">
+		<div class="x-container py-16 md:py-24 xl:py-40">
 			<div class="flex justify-between">
 				<logo />
 
-				<div class="space-x-4">
+				<div class="flex items-center space-x-4">
+					<a
+						v-for="(link, index) in $props.links"
+						:key="index"
+						:href="link.url"
+						v-text="link.title"
+					/>
+				</div>
+			</div>
+
+			<hr class="border-grey-400 mt-6">
+
+			<div class="flex justify-between mt-6">
+				<p
+					class="mt-4 text-center md:text-left"
+					v-html="cCopy"
+				/>
+
+				<div class="flex items-center space-x-4">
+					<p>Follow us:</p>
+
 					<a
 						v-for="(link, index) in $props.social"
 						:key="index"
@@ -17,11 +37,6 @@
 					</a>
 				</div>
 			</div>
-
-			<p
-				class="mt-4 text-center md:text-left"
-				v-html="cCopy"
-			/>
 		</div>
 	</footer>
 </template>
@@ -32,6 +47,11 @@ export default {
 
 	props: {
 		social: {
+			type: Array,
+			default: null,
+		},
+
+		links: {
 			type: Array,
 			default: null,
 		},
