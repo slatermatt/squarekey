@@ -1,6 +1,6 @@
 <template>
 	<footer class="relative z-site-footer bg-white">
-		<div class="x-container py-16 md:py-24 xl:py-40">
+		<div class="x-container py-12 md:py-20 xl:py-32">
 			<div class="flex justify-between">
 				<logo />
 
