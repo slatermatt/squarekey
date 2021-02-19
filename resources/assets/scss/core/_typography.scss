@@ -78,3 +78,7 @@ $h--6: (
 .x-h6 {
 	@include font-size($h--6);
 }
+
+.x-fade {
+	@apply bg-gradient-to-br from-brand-primary to-brand-secondary bg-clip-text text-transparent;
+}
