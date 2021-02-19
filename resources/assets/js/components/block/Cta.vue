@@ -1,14 +1,15 @@
 <template>
-	<section class="bg-brand-primary py-10 md:py-16 xl:py-24">
+	<section class="bg-brand-primary py-16 md:py-24 xl:py-40">
 		<div
 			:class="[
 				'x-container',
 				'grid gap-6 items-center',
 				'md:grid-cols-4 md:max-w-4xl',
+				'xl:max-w-6xl',
 			]"
 		>
 			<h1
-				class="x-h3 text-white md:col-span-3"
+				class="x-h2 text-white md:col-span-3"
 				v-text="$props.title"
 			/>
 
