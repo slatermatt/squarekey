@@ -14,7 +14,7 @@
 			>
 				<div class="max-w-lg mx-auto lg:max-w-sm">
 					<h1
-						class="x-h3"
+						class="x-h3 x-fade"
 						v-text="$props.title"
 					/>
 

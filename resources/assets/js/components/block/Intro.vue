@@ -2,7 +2,7 @@
 	<section class="x-container">
 		<div class="max-w-lg mx-auto text-center">
 			<h1
-				class="x-h2"
+				class="x-h2 x-fade"
 				v-text="$props.title"
 			/>
 
