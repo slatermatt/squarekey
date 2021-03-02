@@ -29,6 +29,7 @@ export default {
 
 	plugins: [
 		'~/resources/assets/js/mixins/include',
+		'~/resources/assets/js/mixins/vue-formulate',
 	],
 
 	buildModules: [
@@ -39,6 +40,7 @@ export default {
 			},
 		],
 		'@nuxtjs/tailwindcss',
+		'@nuxtjs/axios',
 	],
 
 	modules: [

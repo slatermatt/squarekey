@@ -1,5 +1,10 @@
 <template>
-	<section class="bg-brand-primary py-16 md:py-24 xl:py-40">
+	<section
+		:class="[
+			'bg-gradient-to-br from-brand-primary to-blue',
+			'py-16 md:py-24 xl:py-40',
+		]"
+	>
 		<div
 			:class="[
 				'x-container',

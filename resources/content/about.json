@@ -37,7 +37,7 @@
 			},
 			{
 				"type": "cta",
-				"title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt et labore",
+				"title": "Heard enough and ready to talk? Fill out the form on our contact page and we'll be in touch.",
 				"cta": {
 					"title": "Contact us",
 					"url": "/contact"

@@ -1,40 +1,88 @@
 <template>
 	<div class="x-container">
-		<form
-			action="https://formspree.io/f/mbjpeppq"
+		<formulate-form
+			v-model="$data.form"
+			:schema="$props.schema"
+			:action="$props.action"
+			class="space-y-6 max-w-xl mx-auto"
+			:class="{
+				'opacity-50': $data.loading,
+			}"
 			method="POST"
-			class="flex flex-col space-y-5 max-w-xl mx-auto"
+			:disabled="$data.loading || $data.response"
 		>
-			<div
-				v-for="(field, index) in $props.fields"
-				:key="index"
-				class="flex flex-col w-full space-y-1"
-			>
-				<label
-					:for="field.id"
-					v-text="field.placeholder"
-				/>
-
-				<input
-					class="px-4 py-3 border"
-					v-bind="field"
-				>
-			</div>
-
 			<x-button
 				title="Submit"
-				class="self-center"
+				type="submit"
+				:disabled="$data.loading"
+				@click.native.prevent="onSubmit"
 			/>
-		</form>
+		</formulate-form>
+
+		<aside
+			v-if="$data.response"
+			class="relative z-1 -mt-15"
+		>
+			<pre v-text="$data.response" />
+		</aside>
 	</div>
 </template>
 
 <script>
 	export default {
 		props: {
-			fields: {
+			action: {
+				type: String,
+				default: null,
+			},
+
+			schema: {
 				type: Array,
-				required: true,
+				default: null,
+			},
+
+			values: {
+				type: Object,
+				default: () => {},
+			},
+		},
+
+		data() {
+			return {
+				errors: {},
+				form: this.$props.values || {},
+				loading: false,
+				response: null,
+			};
+		},
+
+		methods: {
+			async onSubmit() {
+				this.$data.loading = true;
+
+				try {
+					const response = await this.$axios.post(this.$props.action, this.$data.form);
+
+					const { data, error } = await response.json();
+					const { ok, status, next } = response;
+
+					if (ok) {
+						this.$data.errors = null;
+						this.$data.response = data;
+					} else if (status === 422) {
+						this.$data.errors = error;
+					} else {
+						// passed client-side validation but failed unexpectedly
+						throw error;
+					}
+
+					console.log(next);
+				} catch (error) {
+					// handle thrown + network errors
+					window.alert(error); // eslint-disable-line no-alert
+				}
+
+				this.$data.loading = false;
 			},
 		},
 	};

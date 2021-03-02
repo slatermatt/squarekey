@@ -1,6 +1,6 @@
 <template>
 	<div class="x-container flex flex-col items-center justify-center min-h-screen h-full">
-		<div class="max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-5xl">
+		<div class="max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl">
 			<logo />
 
 			<h1
