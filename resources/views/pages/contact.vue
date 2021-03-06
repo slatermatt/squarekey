@@ -14,6 +14,5 @@ export default {
 	async asyncData ({ $content }) {
 		return await $content('contact').fetch();
 	},
-
 };
 </script>
