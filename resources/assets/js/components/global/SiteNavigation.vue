@@ -1,7 +1,7 @@
 <template>
 	<nav
 		:class="[
-			'sticky top-16 left-0 w-full mt-16',
+			'fixed top-16 left-0 w-full',
 			'bg-brand-primary text-white z-site-navigation',
 			'md:hidden',
 		]"
