@@ -10,6 +10,10 @@
 			{
 				"type": "contactForm",
 				"action": "https://formspree.io/f/mbjpeppq",
+				"success": {
+					"title": "Thanks",
+					"content": "We'll be in touch as soon as possible!"
+				},
 				"schema": [
 					{
 						"label": "First name",

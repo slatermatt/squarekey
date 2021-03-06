@@ -1,29 +1,43 @@
 <template>
-	<div class="x-container">
+	<div class="x-container relative">
 		<formulate-form
+			ref="formulate"
 			v-model="$data.form"
 			:schema="$props.schema"
 			:action="$props.action"
 			class="space-y-6 max-w-xl mx-auto"
 			:class="{
 				'opacity-50': $data.loading,
+				'pointer-events-none': $data.loading || $data.response,
 			}"
 			method="POST"
-			:disabled="$data.loading || $data.response"
+			:disabled="$data.loading || !!$data.response"
+			@submit="onSubmit"
 		>
 			<x-button
 				title="Submit"
 				type="submit"
 				:disabled="$data.loading"
-				@click.native.prevent="onSubmit"
 			/>
 		</formulate-form>
 
 		<aside
 			v-if="$data.response"
-			class="relative z-1 -mt-15"
+			:class="[
+				'absolute text-center max-w-xs z-1',
+				'top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2',
+				'p-12 bg-gradient-to-br from-brand-primary to-blue text-white',
+			]"
 		>
-			<pre v-text="$data.response" />
+			<h1
+				class="x-h3"
+				v-text="this.$data.response.title"
+			/>
+
+			<p
+				class="text-xl mt-2"
+				v-text="this.$data.response.content"
+			/>
 		</aside>
 	</div>
 </template>
@@ -45,44 +59,90 @@
 				type: Object,
 				default: () => {},
 			},
+
+			success: {
+				type: Object,
+				default: () => {},
+			},
+
+			submit: {
+				type: Object,
+				default: null,
+			},
 		},
 
 		data() {
 			return {
+				message: null,
 				errors: {},
 				form: this.$props.values || {},
 				loading: false,
-				response: null,
+				isError: false,
 			};
 		},
 
 		methods: {
+			get(obj, path, defValue) {
+				if (!path) {
+					return undefined;
+				}
+
+				const pathArray = Array.isArray(path) ? path : path.match(/([^[.\]])+/g);
+
+				return (
+					pathArray.reduce((prevObj, key) => prevObj && prevObj[key], obj || defValue)
+				);
+			},
+
 			async onSubmit() {
 				this.$data.loading = true;
 
-				try {
-					const response = await this.$axios.post(this.$props.action, this.$data.form);
+				await this.$axios
+					.post(this.$props.action, this.$data.form)
+					.then(this.onSubmitSuccess)
+					.catch(this.onSubmitFailure)
+					.then(this.onSubmitAlways, this.onSubmitAlways);
+			},
 
-					const { data, error } = await response.json();
-					const { ok, status, next } = response;
+			onSubmitSuccess(response) {
+				this.$data.loading = false;
 
-					if (ok) {
-						this.$data.errors = null;
-						this.$data.response = data;
-					} else if (status === 422) {
-						this.$data.errors = error;
-					} else {
-						// passed client-side validation but failed unexpectedly
-						throw error;
-					}
+				this.$data.isError = false;
+				this.$data.response = {
+					title: `${this.$props.success.title}, ${this.$data.form.firstName}`,
+					content: this.$props.success.content,
+				};
+				this.$data.form = {};
+			},
 
-					console.log(next);
-				} catch (error) {
-					// handle thrown + network errors
-					window.alert(error); // eslint-disable-line no-alert
+			onSubmitFailure(error) {
+				if (this.get(error, 'response.status') !== 422) {
+					return;
 				}
 
+				this.$data.errorMessage = this.get(error, 'response.data.message');
+				this.$data.errors = (this.get(error, 'response.data.errors') || {});
+
+				// this.scrollToError();
+			},
+
+			onSubmitAlways() {
 				this.$data.loading = false;
+			},
+
+			scrollToError() {
+				if (!this.$data.errors) {
+					return;
+				}
+
+				this.$nextTick(() => {
+					const $firstError = this.$refs.fields.filter(el => el.errors)[0].$el;
+
+					$firstError.scrollIntoView({
+						behavior: 'smooth',
+						block: 'center',
+					});
+				});
 			},
 		},
 	};
