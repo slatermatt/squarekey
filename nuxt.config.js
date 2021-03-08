@@ -29,7 +29,7 @@ export default {
 
 	plugins: [
 		'~/resources/assets/js/mixins/include',
-		'~/resources/assets/js/mixins/vue-formulate',
+		'~/resources/assets/js/mixins/form',
 	],
 
 	buildModules: [

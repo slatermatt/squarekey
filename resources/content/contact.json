@@ -9,40 +9,7 @@
 			},
 			{
 				"type": "contactForm",
-				"action": "https://formspree.io/f/mbjpeppq",
-				"success": {
-					"title": "Thanks",
-					"content": "We'll be in touch as soon as possible!"
-				},
-				"schema": [
-					{
-						"label": "First name",
-						"name": "firstName",
-						"validation": "required"
-					},
-					{
-						"label": "Last name",
-						"name": "lastName",
-						"validation": "required"
-					},
-					{
-						"label": "Your email",
-						"name": "email",
-						"validation": "bail|required|email"
-					},
-					{
-						"label": "Phone number",
-						"name": "phoneNumber",
-						"type": "tel",
-						"inputmode": "numeric",
-						"pattern": "[0-9]*",
-						"validation": "number"
-					},
-					{
-						"label": "Company",
-						"name": "company"
-					}
-				]
+				"action": "https://forms.monday.com/forms/embed/8054016e30b3fa37ecf930d32573f0be?r=use1"
 			}
 		]
 	}
